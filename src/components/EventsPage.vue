@@ -15,7 +15,6 @@ const events = [
     sets: [
       {
         dj: 'Kento',
-        image: new URL('../assets/events/vol1/kento.jpg', import.meta.url).href,
         genre: 'Future Bounce',
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol1%2F'
       },
