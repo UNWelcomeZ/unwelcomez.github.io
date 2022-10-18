@@ -1,0 +1,340 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons)
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap')
+@import bootstrap/scss/bootstrap
+
+$card-gradients: linear-gradient(45deg, #ff005e, #010615, #fbff00), linear-gradient(45deg, #89ff00, #010615, #00bcd4), linear-gradient(45deg, #772aff, #010615, #2196f3)
+$modal-clip-size: 20px
+$loading-bg: #0c192c
+$primaryBlue: #4fc3fc
+$primaryRed: #ff2d75
+
+/** Layout CSS **/
+a
+  font-family: 'Audiowide'
+@for $i from 1 through 6
+  h#{$i}
+    font-family: 'Audiowide'
+
+body.modal-open #sections-menu
+  display: none
+
+#app
+  position: relative
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+
+#bg
+  // background: 
+  $bgColor: #0c192ccc
+  background-image: linear-gradient(0deg, $bgColor, $bgColor), url(../assets/bg.png)
+  background-size: cover
+  background-position: center 0px
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: -1
+  transition: all .4s
+  filter: blur(3px)
+
+// https://www.youtube.com/watch?v=n6ojK2HmROE
+#loading
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: 999999
+  background: $loading-bg
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  .loader-container
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0005)
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 180px
+    height: 180px
+    >.loader
+      position: absolute
+      width: 150px
+      height: 150px
+      border-radius: 50%
+      animation: loading 2s linear infinite
+      &:nth-child(1)::before, &:nth-child(2)::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 100%
+        background-size: 100px 180px
+        background-repeat: no-repeat
+        border-top-left-radius: 100px
+        border-bottom-left-radius: 100px
+      &:nth-child(1)::before
+        background: linear-gradient(to top, transparent, darken($primaryBlue,25%))
+      &:nth-child(2)::before
+        background: linear-gradient(to top, transparent, darken($primaryRed,25%))
+      >i
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%)
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        z-index: 9999999
+      >&:nth-child(3)>i
+        background: $primaryBlue
+        $box-shadow: ()
+        @for $i from 1 through 10
+          $theShadow: 0 0 $i*10px $primaryBlue
+          $box-shadow: append($box-shadow, $theShadow, comma)
+        box-shadow: $box-shadow
+      >&:nth-child(4)>i
+        background: $primaryRed
+        $box-shadow: ()
+        @for $i from 1 through 10
+          $theShadow: 0 0 $i*10px $primaryRed
+          $box-shadow: append($box-shadow, $theShadow, comma)
+        box-shadow: $box-shadow
+      >span
+        position: absolute
+        inset: 20px
+        background: $loading-bg
+        border-radius: 50%
+        z-index: 1
+      &:nth-child(2), &:nth-child(4)
+        animation-delay: -1s
+
+@keyframes loading
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+#content
+  transition: transform .4s
+
+#header, #footer
+  background: rgba(0,0,0,0.5)
+  backdrop-filter: blur(10px)
+
+#header
+  border-bottom: 1px solid white
+  .navbar-brand img
+    height: 30px
+
+#footer
+  height: 56px
+  position: fixed
+  bottom: 0rem
+  width: 100%
+  border-top: 1px solid white
+
+.link-light
+  color: gray !important
+  &:hover
+    color: white !important
+
+hr
+  height: 2px
+
+#modal-dj, #modal-event
+  backdrop-filter: blur(5px)
+  .modal-content-wrapper
+    clip-path: polygon($modal-clip-size 0%, calc(100% - $modal-clip-size) 0%, 100% 0, 100% calc(100% - $modal-clip-size), calc(100% - $modal-clip-size) 100%, $modal-clip-size 100%, 0 100%, 0% $modal-clip-size)
+    background: white
+    padding: 1px
+    width: 100%
+    height: 100%
+  .modal-content
+    background: black
+    color: white
+    border-radius: 0px
+    clip-path: polygon($modal-clip-size 0%, calc(100% - $modal-clip-size) 0%, 100% 0, 100% calc(100% - $modal-clip-size), calc(100% - $modal-clip-size) 100%, $modal-clip-size 100%, 0 100%, 0% $modal-clip-size)
+  .btn-close
+    filter: invert(1)
+    align-self: flex-start
+
+#modal-event
+  .poster-wrapper
+    height: 50vh
+    .poster
+      width: 100%
+      height: 100%
+      object-fit: contain
+      &.poster-right
+        object-position: left
+      &.poster-left
+        object-position: right
+  .nav-link
+    color: white !important
+    &:hover, &:focus
+      color: white !important
+    &.disabled
+      pointer-events: all !important
+      cursor: pointer !important
+      color: #6c757d !important
+
+.fullpage
+  height: calc(var(--vh, 1vh) * 100)
+
+#sections-menu
+  position: fixed
+  right: 1rem
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 99999
+  .menu-point
+    width: 10px
+    height: 10px
+    background-color: #FFF
+    display: block
+    margin: 1rem 0
+    opacity: .6
+    transition: .4s ease all
+    cursor: pointer
+    border-radius: 50%
+    &.active
+      opacity: 1
+      transform: scale(1.5)
+
+.card-event > img
+  object-fit: contain
+  object-position: center
+
+// https://www.youtube.com/watch?v=lCxfo8tvHqk
+.card-dj, .card-event
+  position: relative
+  height: calc(100% - 2rem - ($font-size-base * $line-height-base))
+  width: 100%
+  cursor: pointer
+  > span
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: inline-block
+    background: #0e1538
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid #040a29
+    box-sizing: border-box
+    > img
+      object-fit: cover
+      width: 100%
+      height: 100%
+      transition: transform .5s
+  &:before, &:after
+    content: ''
+    position: absolute
+    inset: 0
+    transition: .5s
+  &:hover
+    &:before
+      inset: -4px
+    &:after
+      inset: -4px
+      filter: blur(40px)
+    > span > img
+      transform: scale(1.05)
+// @each $card-gradient in $card-gradients
+//   $i: index($card-gradients, $card-gradient)
+//   .card-dj#dj-#{$i}:before, .card-dj#dj-#{$i}:after
+//     background: $card-gradient
+
+.card-dj-wrapper
+  height: 30vh
+
+#events .swiper
+  height: 70vh
+#dj .swiper
+  height: 50vh
+.swiper-wrapper
+  height: calc(100% - 24px)
+.swiper-button-next, .swiper-button-prev
+  color: white !important
+.swiper-button-disabled
+  color: gray !important
+
+.wbctA
+  height: 70vh
+  overflow: hidden
+  border: 1px solid white
+  border-radius: 5px
+  box-sizing: border-box
+  iframe
+    height: 100% !important
+
+/** Animations **/
+.fade-in
+  opacity: 0
+  
+.overlay-bottom
+  position: relative
+  overflow: hidden
+  --afterTop: 0
+  &:after
+    content: ''
+    background: white
+    width: 100%
+    height: 100%
+    position: absolute
+    top: var(--afterTop)
+    left: 0
+
+.overlay-right
+  position: relative
+  overflow: hidden
+  --afterWidth: 100%
+  &:after
+    content: ''
+    background: white
+    width: var(--afterWidth)
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    
+#logosvg
+  fill: white
+  filter: drop-shadow(2px 4px 6px black)
+  .mask-path
+    fill: none
+    stroke: #fff
+    stroke-width: 100
+    stroke-miterlimit: 10
+    stroke-dasharray: 1000
+    stroke-dashoffset: 1000
+    stroke-linecap: square
+    stroke-linejoin: bevel
+  #text
+    opacity: 0
+  @for $i from 1 through 3
+    #star#{$i}
+      opacity: 0
+  #line1
+    opacity: 0
+    transform: translate(60px,-60px)
+  #line2
+    opacity: 0
+    transform: translate(-30px, 30px)
+  #line3
+    opacity: 0
+    transform: translate(-75px, 75px)
+  #line4
+    opacity: 0
+    transform: translate(-30px, 30px)
+  #line5
+    opacity: 0
+    transform: translate(-75px, 75px)
+  .star
+    transform-origin: 50% 50%
+    transform-box: fill-box
+    animation: loading 2s linear infinite
