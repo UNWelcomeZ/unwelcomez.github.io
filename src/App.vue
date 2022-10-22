@@ -232,6 +232,9 @@ nav.navbar.navbar-expand.navbar-dark.fixed-top#header
           a.nav-link.link-light.fade-in(href='https://twitter.com/hashtag/VRC_UNWZ' target='_blank')
             font-awesome-icon(:icon="['fab', 'twitter']")
         li.nav-item
+          a.nav-link.link-light.fade-in(href='https://www.twitch.tv/twitch_unwelcomez' target='_blank')
+            font-awesome-icon(:icon="['fab', 'twitch']")
+        li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
             font-awesome-icon(:icon="['fab', 'discord']")
 #sections-menu
