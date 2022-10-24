@@ -229,7 +229,7 @@ nav.navbar.navbar-expand.navbar-dark.fixed-top#header
     .collapse.navbar-collapse#navbarSupportedContent
       ul.navbar-nav.ms-auto.mb-lg-0
         li.nav-item
-          a.nav-link.link-light.fade-in(href='https://twitter.com/hashtag/VRC_UNWZ' target='_blank')
+          a.nav-link.link-light.fade-in(href='https://twitter.com/search?q=%23VRC_UNWZ&src=typed_query&f=live' target='_blank')
             font-awesome-icon(:icon="['fab', 'twitter']")
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://www.twitch.tv/twitch_unwelcomez' target='_blank')
