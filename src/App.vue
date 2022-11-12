@@ -6,6 +6,7 @@ import HomePage from '@/components/HomePage.vue'
 import DJPage from '@/components/DJPage.vue'
 import EventsPage from '@/components/EventsPage.vue'
 import TwitterPage from '@/components/TwitterPage.vue'
+import { useI18n } from 'vue-i18n'
 
 /** CSS Doodle background **/
 const bg = ref(null)
@@ -145,6 +146,16 @@ const animate = () => {
   })
 }
 
+/** Locale **/
+const { locale } = useI18n({ useScope: 'global' })
+const langs = [
+  { code: 'zh', name: '中文' },
+  { code: 'ja', name: '日本語' }
+]
+const setLocale = (lang) => {
+  locale.value = lang
+}
+
 /** Lifecycles **/
 onMounted(async () => {
   try {
@@ -237,6 +248,12 @@ nav.navbar.navbar-expand.navbar-dark.fixed-top#header
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
             font-awesome-icon(:icon="['fab', 'discord']")
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle.fade-in(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            font-awesome-icon(:icon="['fas', 'earth-asia']")
+          ul.dropdown-menu
+            li(v-for='lang in langs' :key='lang.code')
+              a.dropdown-item(@click.prevent='setLocale(lang.code)' :class="{ active: lang.code === locale }" href='#') {{ lang.name }}
 #sections-menu
   span.menu-point(v-for='(offset, idx) in offsets' :key='idx' :class='{active: activeSection == idx}' @click='scrollToSection(idx)')
 #content(ref='swipeTarget')
