@@ -34,6 +34,39 @@ const events = [
         player: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1360676227&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
       }
     ]
+  },
+  {
+    name: 'UNWPA Vol.2',
+    sub: '幹你小高',
+    image: new URL('../assets/events/vol2.jpg', import.meta.url).href,
+    imageTime: null,
+    date: '2022/10/08 20:00',
+    sets: [
+      {
+        dj: 'DJ_Jill',
+        player: ''
+      },
+      {
+        dj: 'Vengtz',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fvengtz%2Funwpa-vol2-%E7%88%86%E7%99%BA%2F'
+      },
+      {
+        dj: 'Kento',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol2%2F'
+      },
+      {
+        dj: '九彌 Kuya',
+        player: ''
+      },
+      {
+        dj: 'Roxwindy',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FXiaokao%2Funwap-vol2-%E5%9B%82%E5%91%8A%2F'
+      }
+    ]
   }
 ]
 
@@ -103,7 +136,7 @@ const swiperOptions = {
       spaceBetween: 20
     },
     992: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20
     }
   },
@@ -152,10 +185,10 @@ Teleport(to='body')
               span.text-muted {{ events[modalEvent].date }}
           .modal-body
             .container-fluid
-              .row
+              .row.justify-content-center
                 .col-6.poster-wrapper
-                  img.poster.poster-left(:src='events[modalEvent].image')
-                .col-6.poster-wrapper
+                  img.poster(:class='{"poster-left": events[modalEvent].imageTime}' :src='events[modalEvent].image')
+                .col-6.poster-wrapper(v-if='events[modalEvent].imageTime')
                   img.poster.poster-right(:src='events[modalEvent].imageTime')
           .modal-footer
             .container-fluid
@@ -165,5 +198,6 @@ Teleport(to='body')
                     li.nav-item(v-for='(set, idx) in events[modalEvent].sets' :key='idx')
                       a.nav-link(:class="{ disabled: idx !== modalSet}" href='#' @click='modalSet = idx') {{ set.dj }}
                 .col-12
-                  iframe.w-100(height="120" :src="events[modalEvent].sets[modalSet].player" frameborder="0")
+                  iframe.w-100(v-if='events[modalEvent].sets[modalSet].player' height="120" :src="events[modalEvent].sets[modalSet].player" frameborder="0")
+                  h4.my-2.text-white.text-center(v-else) - NOT UPLOADED -
 </template>
