@@ -15,27 +15,22 @@ const events = [
     sets: [
       {
         dj: 'Kento',
-        genre: 'Future Bounce',
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol1%2F'
       },
       {
         dj: 'StarlightPoetry',
-        genre: '混沌流',
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FStarlightPoetry%2Funwpa-vol1-starlightpoetry%2F'
       },
       {
         dj: 'DJ_Jill',
-        genre: 'JPOP',
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJ_JILL%2F20221008-unwpa-vol1-jpop-remix%2F'
       },
       {
         dj: 'Eliot',
-        genre: 'Drum & Bass & More',
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Feliot0507%2Funwpa-vol1-20221008%2F'
       },
       {
         dj: 'Xiaokao',
-        genre: 'Hardcore',
         player: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1360676227&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
       }
     ]
