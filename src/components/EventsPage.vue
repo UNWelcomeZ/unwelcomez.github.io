@@ -9,8 +9,8 @@ const events = [
   {
     name: 'UNWPA Vol.1',
     sub: 'DJ 五人眾，媽的貢丸',
-    image: new URL('../assets/events/vol1/vol1.jpg', import.meta.url).href,
-    imageTime: new URL('../assets/events/vol1/vol1-time.jpg', import.meta.url).href,
+    image: new URL('../assets/events/vol1.jpg', import.meta.url).href,
+    imageTime: new URL('../assets/events/vol1-time.jpg', import.meta.url).href,
     date: '2022/10/08 20:00',
     sets: [
       {
