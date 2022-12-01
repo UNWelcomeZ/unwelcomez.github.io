@@ -2,6 +2,7 @@
 import { ref, reactive, onMounted, onUnmounted, nextTick } from 'vue'
 import { useSwipe } from '@vueuse/core'
 import gsap from 'gsap'
+import LogoVRC from '@/components/LogoVRC.vue'
 import HomePage from '@/components/HomePage.vue'
 import DJPage from '@/components/DJPage.vue'
 import EventsPage from '@/components/EventsPage.vue'
@@ -248,6 +249,9 @@ nav.navbar.navbar-expand.navbar-dark.fixed-top#header
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
             font-awesome-icon(:icon="['fab', 'discord']")
+        li.nav-item
+          a.nav-link.link-light.fade-in(href='https://vrchat.com/home/group/grp_519b637b-c5b8-4d5c-a024-e5b688fc45d7' target='_blank')
+            LogoVRC
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle.fade-in(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
             font-awesome-icon(:icon="['fas', 'earth-asia']")
