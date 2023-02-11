@@ -51,6 +51,18 @@ const djs = [
     sns: [
       { type: 'twitter', link: 'https://twitter.com/kste5000' }
     ]
+  },
+  {
+    name: 'Eliot',
+    role: 'DJ',
+    image: new URL('../assets/dj/eliot.png', import.meta.url).href,
+    text: 'profile.eliot',
+    genre: [],
+    sns: [
+      { type: 'twitter', link: 'https://twitter.com/eliot0507' },
+      { type: 'instagram', link: 'https://www.instagram.com/eliot0507/' },
+      { type: 'mixcloud', link: 'https://www.mixcloud.com/eliot0507/' }
+    ]
   }
 ]
 
