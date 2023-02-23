@@ -238,23 +238,23 @@ nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
       ul.navbar-nav.ms-auto.mb-lg-0
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://twitter.com/search?q=%23VRC_UNWZ&src=typed_query&f=live' target='_blank')
-            font-awesome-icon(:icon="['fab', 'twitter']")
+            font-awesome-icon.fa-fw(:icon="['fab', 'twitter']")
             span.d-sm-none &emsp;Twitter
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://www.twitch.tv/twitch_unwelcomez' target='_blank')
-            font-awesome-icon(:icon="['fab', 'twitch']")
+            font-awesome-icon.fa-fw(:icon="['fab', 'twitch']")
             span.d-sm-none &emsp;Twitch
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
-            font-awesome-icon(:icon="['fab', 'discord']")
+            font-awesome-icon.fa-fw(:icon="['fab', 'discord']")
             span.d-sm-none &emsp;Discord
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://vrchat.com/home/group/grp_519b637b-c5b8-4d5c-a024-e5b688fc45d7' target='_blank')
-            LogoVRC
+            LogoVRC.fa-fw
             span.d-sm-none &emsp;VRC Group
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle.fade-in(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-            font-awesome-icon(:icon="['fas', 'earth-asia']")
+            font-awesome-icon.fa-fw(:icon="['fas', 'earth-asia']")
             span.d-sm-none &emsp;{{ $t('nav.languages') }}
           ul.dropdown-menu
             li(v-for='lang in langs' :key='lang.code')
