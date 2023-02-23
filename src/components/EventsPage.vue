@@ -175,15 +175,17 @@ Teleport(to='body')
   .modal.fade#modal-event
     .modal-dialog.modal-dialog-centered.modal-xl
       .modal-content-wrapper
-        .modal-content
+        .modal-content.position-relative
+          .modal-close.position-absolute
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
           .modal-header
             h5.modal-title.text-center.w-100
               | {{ events[modalEvent].name }}
               br
               | {{ events[modalEvent].sub }}
               br
-              span.text-muted {{ events[modalEvent].date }}
-          .modal-body
+              span.h6.text-muted {{ events[modalEvent].date }}
+          .modal-body.d-none.d-sm-block
             .container-fluid
               .row.justify-content-center
                 .col-6.poster-wrapper
@@ -197,7 +199,10 @@ Teleport(to='body')
                   ul.nav.justify-content-center
                     li.nav-item(v-for='(set, idx) in events[modalEvent].sets' :key='idx')
                       a.nav-link(:class="{ disabled: idx !== modalSet}" href='#' @click='modalSet = idx') {{ set.dj }}
+          .modal-footer
+            .container-fluid
+              .row
                 .col-12
                   iframe.w-100(v-if='events[modalEvent].sets[modalSet].player' height="120" :src="events[modalEvent].sets[modalSet].player" frameborder="0")
-                  h4.my-2.text-white.text-center(v-else) - NOT UPLOADED -
+                  h6.my-2.text-white.text-center(v-else) - NOT UPLOADED -
 </template>
