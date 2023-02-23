@@ -169,11 +169,13 @@ Teleport(to='body')
     .modal-dialog.modal-dialog-centered.modal-lg
       .modal-content-wrapper
         .modal-content
+          .modal-header.border-0
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
           .modal-body
             .container-fluid
               .row
-                .col-12.col-lg-6
-                  img.w-100(:src='djs[modalDJ].image')
+                .col-12.col-lg-6.text-center
+                  img#modal-dj-avatar(:src='djs[modalDJ].image')
                 .col-12.col-lg-6.my-3
                   .row.align-items-center.h-100
                     .col-12
