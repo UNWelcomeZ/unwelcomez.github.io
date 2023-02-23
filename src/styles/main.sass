@@ -74,7 +74,7 @@ body.modal-open #sections-menu
   .navbar-brand img
     height: 30px
   .dropdown-menu
-    background: black
+    --bs-dropdown-bg: #0000
     right: 0
     left: auto
     .dropdown-item
@@ -85,6 +85,10 @@ body.modal-open #sections-menu
       &.active
         background: transparent
         color: white
+@include media-breakpoint-up(sm)
+  #header
+    .dropdown-menu
+      background: black
 
 #footer
   height: 56px
@@ -146,7 +150,7 @@ hr
   right: 1rem
   top: 50%
   transform: translateY(-50%)
-  z-index: 99999
+  z-index: 1029
   .menu-point
     width: 10px
     height: 10px
