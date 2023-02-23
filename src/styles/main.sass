@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons)
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap')
 @import bootstrap/scss/bootstrap
+@import @loadingio/loading.css/entries/fade.min.css
 
 $card-gradients: linear-gradient(45deg, #ff005e, #010615, #fbff00), linear-gradient(45deg, #89ff00, #010615, #00bcd4), linear-gradient(45deg, #772aff, #010615, #2196f3)
 $modal-clip-size: 20px
-$loading-bg: #0c192c
+$loading-bg: #000000
 $primaryBlue: #4fc3fc
 $primaryRed: #ff2d75
 
@@ -48,68 +49,14 @@ body.modal-open #sections-menu
   align-items: center
   justify-content: center
   flex-wrap: wrap
-  .loader-container
-    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0005)
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: center
+  img
     width: 180px
     height: 180px
-    >.loader
-      position: absolute
-      width: 150px
-      height: 150px
-      border-radius: 50%
-      animation: loading 2s linear infinite
-      &:nth-child(1)::before, &:nth-child(2)::before
-        content: ''
-        position: absolute
-        top: 0
-        left: 0
-        width: 50%
-        height: 100%
-        background-size: 100px 180px
-        background-repeat: no-repeat
-        border-top-left-radius: 100px
-        border-bottom-left-radius: 100px
-      &:nth-child(1)::before
-        background: linear-gradient(to top, transparent, darken($primaryBlue,25%))
-      &:nth-child(2)::before
-        background: linear-gradient(to top, transparent, darken($primaryRed,25%))
-      >i
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translate(-50%)
-        width: 20px
-        height: 20px
-        border-radius: 50%
-        z-index: 9999999
-      >&:nth-child(3)>i
-        background: $primaryBlue
-        $box-shadow: ()
-        @for $i from 1 through 10
-          $theShadow: 0 0 $i*10px $primaryBlue
-          $box-shadow: append($box-shadow, $theShadow, comma)
-        box-shadow: $box-shadow
-      >&:nth-child(4)>i
-        background: $primaryRed
-        $box-shadow: ()
-        @for $i from 1 through 10
-          $theShadow: 0 0 $i*10px $primaryRed
-          $box-shadow: append($box-shadow, $theShadow, comma)
-        box-shadow: $box-shadow
-      >span
-        position: absolute
-        inset: 20px
-        background: $loading-bg
-        border-radius: 50%
-        z-index: 1
-      &:nth-child(2), &:nth-child(4)
-        animation-delay: -1s
+    animation-duration: 1.25s
+    transition: opacity .5s
+    opacity: 0
 
-@keyframes loading
+@keyframes rotate
   0%
     transform: rotate(0deg)
   100%
@@ -349,4 +296,4 @@ hr
   .star
     transform-origin: 50% 50%
     transform-box: fill-box
-    animation: loading 2s linear infinite
+    animation: rotate 2s linear infinite

@@ -134,12 +134,15 @@ const animate = () => {
   gsap.to('#loading', {
     duration: 0.5,
     autoAlpha: 0,
-    delay: 1.5
+    delay: 2.0,
+    onStart () {
+      document.querySelector('#loading .ld-fade').classList.remove('ld-fade')
+    }
   })
   gsap.to('#header .fade-in, #footer .fade-in', {
     duration: 2,
     opacity: 1,
-    delay: 2,
+    delay: 2.5,
     onStart () {
       inMove.value = false
       calculateSectionOffsets()
@@ -188,18 +191,9 @@ onUnmounted(() => {
 <template lang="pug">
 #loading
   .row.w-100
-    .col-12
-      .loader-container.w-100
-        .loader
-          span
-        .loader
-          span
-        .loader
-          i
-        .loader
-          i
-    .col-12.my-3
-      h4.text-white.text-center #VRC_UNWZ
+    .col-12.text-center
+      img.ld.ld-fade(src="@/assets/emoji.png")
+      h4.text-white.my-5 #VRC_UNWZ
 #bg(ref='bg')
   //- CSS Doodle Remake
   //- https://www.youtube.com/watch?v=wuUSVEcK-kM
