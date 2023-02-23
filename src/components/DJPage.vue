@@ -168,8 +168,10 @@ Teleport(to='body')
   .modal.fade#modal-dj
     .modal-dialog.modal-dialog-centered.modal-lg
       .modal-content-wrapper
-        .modal-content
-          .modal-header.border-0
+        .modal-content.position-relative
+          .modal-close.position-absolute.d-none.d-lg-block
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          .modal-header.border-0.d-flex.d-lg-none
             button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
           .modal-body
             .container-fluid
