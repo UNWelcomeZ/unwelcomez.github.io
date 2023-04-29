@@ -241,13 +241,17 @@ nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
             font-awesome-icon.fa-fw(:icon="['fab', 'twitter']")
             span.d-sm-none &emsp;Twitter
         li.nav-item
-          a.nav-link.link-light.fade-in(href='https://www.twitch.tv/twitch_unwelcomez' target='_blank')
-            font-awesome-icon.fa-fw(:icon="['fab', 'twitch']")
-            span.d-sm-none &emsp;Twitch
+          a.nav-link.link-light.fade-in(href='https://www.facebook.com/profile.php?id=100091842720646' target='_blank')
+            font-awesome-icon.fa-fw(:icon="['fab', 'facebook-f']")
+            span.d-sm-none &emsp;Facebook
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
             font-awesome-icon.fa-fw(:icon="['fab', 'discord']")
             span.d-sm-none &emsp;Discord
+        li.nav-item
+          a.nav-link.link-light.fade-in(href='https://www.twitch.tv/twitch_unwelcomez' target='_blank')
+            font-awesome-icon.fa-fw(:icon="['fab', 'twitch']")
+            span.d-sm-none &emsp;Twitch
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://vrchat.com/home/group/grp_519b637b-c5b8-4d5c-a024-e5b688fc45d7' target='_blank')
             LogoVRC.fa-fw

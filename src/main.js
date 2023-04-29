@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faEarthAsia } from '@fortawesome/free-solid-svg-icons'
 import VueGtag from 'vue-gtag'
 import App from './App.vue'
@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 import './styles/main.sass'
 
-library.add(faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, faEarthAsia)
+library.add(faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, faFacebookF, faEarthAsia)
 
 const app = createApp(App)
 
