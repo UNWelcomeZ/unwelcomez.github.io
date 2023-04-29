@@ -9,7 +9,7 @@ import { Navigation, Autoplay } from 'swiper'
 const djs = [
   {
     name: 'Kento',
-    role: 'Owner / DJ',
+    role: 'Owner / DJ / VJ',
     image: new URL('../assets/dj/kento.jpg', import.meta.url).href,
     text: 'profile.kento',
     genre: [],
@@ -32,7 +32,7 @@ const djs = [
   },
   {
     name: 'Jill',
-    role: 'DJ',
+    role: 'DJ / Art',
     image: new URL('../assets/dj/jill.jpg', import.meta.url).href,
     text: 'profile.jill',
     genre: [],
@@ -44,7 +44,7 @@ const djs = [
   },
   {
     name: 'kste5000',
-    role: 'Art',
+    role: 'Art / VJ',
     image: new URL('../assets/dj/kste.png', import.meta.url).href,
     text: 'profile.kste',
     genre: [],
