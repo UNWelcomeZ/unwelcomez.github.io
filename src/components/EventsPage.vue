@@ -67,6 +67,39 @@ const events = [
         player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FXiaokao%2Funwap-vol2-%E5%9B%82%E5%91%8A%2F'
       }
     ]
+  },
+  {
+    name: 'UNWPA Vol.3',
+    sub: '藍色妖姬',
+    image: new URL('../assets/events/vol3.jpg', import.meta.url).href,
+    imageTime: null,
+    date: '2022/10/08 20:00',
+    sets: [
+      {
+        dj: 'Eliot',
+        player: ''
+      },
+      {
+        dj: 'Kento',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol3%2F'
+      },
+      {
+        dj: 'LR163',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao',
+        player: ''
+      },
+      {
+        dj: 'Zilka',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fzilka0116%2F324-unwpavol3-jill-birthday-set%2F'
+      },
+      {
+        dj: 'DJ_Jill',
+        player: ''
+      }
+    ]
   }
 ]
 
