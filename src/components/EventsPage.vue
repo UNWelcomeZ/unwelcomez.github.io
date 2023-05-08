@@ -40,7 +40,7 @@ const events = [
     sub: '幹你小高',
     image: new URL('../assets/events/vol2.jpg', import.meta.url).href,
     imageTime: null,
-    date: '2022/10/08 20:00',
+    date: '2022/11/12 20:00',
     sets: [
       {
         dj: 'DJ_Jill',
