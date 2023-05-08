@@ -73,7 +73,7 @@ const events = [
     sub: '藍色妖姬',
     image: new URL('../assets/events/vol3.jpg', import.meta.url).href,
     imageTime: null,
-    date: '2022/10/08 20:00',
+    date: '2023/03/24 20:00',
     sets: [
       {
         dj: 'Eliot',
