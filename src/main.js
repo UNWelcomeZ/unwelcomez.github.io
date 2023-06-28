@@ -5,11 +5,13 @@ import { faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, 
 import { faEarthAsia } from '@fortawesome/free-solid-svg-icons'
 import VueGtag from 'vue-gtag'
 import Particles from 'vue3-particles'
+import VueFullPage from 'vue-fullpage.js'
 import App from './App.vue'
 import i18n from './i18n'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
+import 'vue-fullpage.js/dist/style.css'
 import './styles/main.sass'
 
 library.add(faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, faFacebookF, faEarthAsia)
@@ -21,4 +23,5 @@ app
   .use(i18n)
   .use(VueGtag, { config: { id: 'G-6E15JTQ95D' } })
   .use(Particles)
+  .use(VueFullPage)
   .mount('#app')

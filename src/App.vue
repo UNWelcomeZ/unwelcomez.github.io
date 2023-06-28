@@ -113,114 +113,8 @@ const particlesOptions = {
 }
 const particlesInit = async engine => {
   await loadFull(engine)
+  animate()
 }
-
-/** Fullpage scroll, edited from https://codepen.io/WebDEasy/pen/NVOEBL **/
-const inMove = ref(true)
-const activeSection = ref(0)
-const offsets = reactive([])
-
-const isModalOpen = () => document.body.classList.contains('modal-open')
-
-const calculateSectionOffsets = () => {
-  const vh = window.innerHeight * 0.01
-  document.documentElement.style.setProperty('--vh', `${vh}px`)
-  const sections = document.querySelectorAll('section.fullpage')
-  const length = sections.length
-  offsets.splice(0, offsets.length)
-  for (let i = 0; i < length; i++) {
-    const sectionOffset = sections[i].offsetTop
-    offsets.push(sectionOffset)
-  }
-  scrollToSection(activeSection.value, true)
-}
-const handleMouseWheel = (e) => {
-  if (inMove.value) return false
-  if (e.wheelDelta < 30) moveUp()
-  else if (e.wheelDelta > 30) moveDown()
-  e.preventDefault()
-  return false
-}
-const handleMouseWheelDOM = (e) => {
-  if (inMove.value) return false
-
-  if (e.detail > 0) moveUp()
-  else if (e.detail < 0) moveDown()
-
-  return false
-}
-const moveDown = () => {
-  if (isModalOpen()) return
-
-  inMove.value = true
-  activeSection.value--
-
-  if (activeSection.value < 0) activeSection.value = offsets.length - 1
-
-  scrollToSection(activeSection.value, true)
-}
-const moveUp = () => {
-  if (isModalOpen()) return
-
-  inMove.value = true
-  activeSection.value++
-
-  if (activeSection.value > offsets.length - 1) activeSection.value = 0
-
-  scrollToSection(activeSection.value, true)
-}
-const scrollToSection = (id, force = false) => {
-  if ((inMove.value && !force) || isModalOpen()) return
-  activeSection.value = id
-  inMove.value = true
-  document.getElementById('content').style.transform = `translate3d(0px, ${window.innerHeight * id * -1}px, 0px)`
-  bg.value.style.backgroundPosition = 'center ' + activeSection.value * 20 * -1 + 'px'
-  setTimeout(async () => {
-    await componentRefs.value[activeSection.value].animate()
-    inMove.value = false
-  }, 400)
-}
-
-const swipeTarget = ref(null)
-let swipping = false
-useSwipe(
-  swipeTarget,
-  {
-    passive: false,
-    onSwipeStart (e) {
-      setTimeout(() => {
-        if (swipping) return
-
-        if (e.target.classList.contains('swiper-button-next') || e.target.classList.contains('swiper-button-prev')) {
-          e.target.click()
-        } else if (activeSection.value === 1) {
-          // e.target is card img
-          const card = e.target?.parentElement?.parentElement
-          if (card?.classList?.contains('card-dj')) {
-            e.target.click()
-          }
-        } else if (activeSection.value === 2) {
-          // e.target is card img
-          const card = e.target?.parentElement?.parentElement
-          if (card?.classList?.contains('card-event')) {
-            e.target.click()
-          }
-        }
-      }, 100)
-    },
-    onSwipe (e) {
-      swipping = true
-    },
-    onSwipeEnd (e, direction) {
-      swipping = false
-
-      if (inMove.value) return
-
-      if (direction === 'UP') moveUp()
-      else if (direction === 'DOWN') moveDown()
-    }
-  }
-)
 
 /** Components **/
 const components = [HomePage, DJPage, EventsPage, TwitterPage]
@@ -228,12 +122,16 @@ const componentRefs = ref([])
 
 /** Animate **/
 const animate = () => {
+  // Loading faeout
   gsap.to('#loading', {
     duration: 0.5,
     autoAlpha: 0,
     delay: 2.0,
     onStart () {
       document.querySelector('#loading .ld-fade').classList.remove('ld-fade')
+    },
+    onComplete () {
+      componentRefs.value[0].animate()
     }
   })
   gsap.to('#header .fade-in, #footer .fade-in', {
@@ -241,8 +139,6 @@ const animate = () => {
     opacity: 1,
     delay: 2.5,
     onStart () {
-      inMove.value = false
-      calculateSectionOffsets()
     }
   })
 }
@@ -257,26 +153,22 @@ const setLocale = (lang) => {
   locale.value = lang
 }
 
-/** Lifecycles **/
-onMounted(async () => {
-  try {
-    window.addEventListener('DOMMouseScroll', handleMouseWheelDOM) // Mozilla Firefox
-    window.addEventListener('mousewheel', handleMouseWheel, { passive: false }) // Other browsers
-    window.addEventListener('resize', calculateSectionOffsets)
-
-    animate()
-  } catch (error) {
-    if (import.meta.env.DEV) {
-      console.log(error)
-    }
+/** FullPage.js **/
+const fullpage = ref(null)
+const onFullLeave = (origin, destination, direction, trigger) => {
+  bg.value.style.backgroundPosition = 'center ' + origin.index * 20 * -1 + 'px'
+  if (origin !== 0) {
+    setTimeout(() => {
+      componentRefs.value[destination.index].animate()
+    }, 150)
   }
-})
-
-onUnmounted(() => {
-  window.removeEventListener('mousewheel', handleMouseWheel, { passive: false }) // Other browsers
-  window.removeEventListener('DOMMouseScroll', handleMouseWheelDOM) // Mozilla Firefox
-  window.removeEventListener('resize', calculateSectionOffsets)
-})
+}
+const fullPageOptions = {
+  licenseKey: 'gplv3-license',
+  navigation: true,
+  navigationPosition: 'right',
+  onLeave: onFullLeave
+}
 </script>
 
 <template lang="pug">
@@ -328,7 +220,7 @@ nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
               a.dropdown-item(@click.prevent='setLocale(lang.code)' :class="{ active: lang.code === locale }" href='#') {{ lang.name }}
 #sections-menu
   span.menu-point(v-for='(offset, idx) in offsets' :key='idx' :class='{active: activeSection == idx}' @click='scrollToSection(idx)')
-#content(ref='swipeTarget')
+full-page#fullpage(ref="fullpage" :options="fullPageOptions")
   component(v-for='(component, idx) in components' :key='idx' :is='component' ref='componentRefs')
 footer#footer
   .row.h-100.align-items-center

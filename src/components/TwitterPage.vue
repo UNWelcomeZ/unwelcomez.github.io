@@ -26,7 +26,7 @@ defineExpose({ animate })
 </script>
 
 <template lang="pug">
-section.fullpage#twitter
+section.section#twitter
   .container.h-100
     .row.align-content-center.justify-content-center.h-100
       .col-12.overlay-right

@@ -21,6 +21,7 @@
     "swiper": "^8.4.3",
     "tsparticles": "^2.10.1",
     "vue": "^3.2.37",
+    "vue-fullpage.js": "^0.2.15",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "9",
     "vue3-particles": "^2.10.1",

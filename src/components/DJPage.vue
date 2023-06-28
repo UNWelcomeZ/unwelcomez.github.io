@@ -146,7 +146,7 @@ onMounted(() => {
 </script>
 
 <template lang="pug">
-section.fullpage#dj
+section.section#dj
   .container.h-100
     .row.align-content-center.justify-content-center.h-100
       .col-12.overlay-right

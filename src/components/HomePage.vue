@@ -59,7 +59,7 @@ defineExpose({ animate })
 </script>
 
 <template lang="pug">
-section.fullpage#home
+section.section#home
   .container.h-100
     .row.align-content-center.justify-content-center.h-100
       .col-12.col-lg-8#logo-wrapper
