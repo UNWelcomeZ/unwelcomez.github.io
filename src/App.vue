@@ -156,7 +156,7 @@ const setLocale = (lang) => {
 /** FullPage.js **/
 const fullpage = ref(null)
 const onFullLeave = (origin, destination, direction, trigger) => {
-  bg.value.style.backgroundPosition = 'center ' + origin.index * 20 * -1 + 'px'
+  bg.value.style.backgroundPosition = 'center ' + destination.index * 20 * -1 + 'px'
   if (origin !== 0) {
     setTimeout(() => {
       componentRefs.value[destination.index].animate()
