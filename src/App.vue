@@ -9,14 +9,7 @@ import EventsPage from '@/components/EventsPage.vue'
 import TwitterPage from '@/components/TwitterPage.vue'
 import { useI18n } from 'vue-i18n'
 
-/** CSS Doodle background **/
 const bg = ref(null)
-// const doodle = ref(null)
-// const cssDoodle = () => import(
-//   /* webpackChunkName: "css-doodle" */
-//   /* webpackMode: "eager" */
-//   'css-doodle'
-// )
 
 /** Fullpage scroll, edited from https://codepen.io/WebDEasy/pen/NVOEBL **/
 const inMove = ref(true)
@@ -163,12 +156,6 @@ const setLocale = (lang) => {
 /** Lifecycles **/
 onMounted(async () => {
   try {
-    // await cssDoodle()
-    // await nextTick()
-
-    // doodle.value = bg.value.firstElementChild
-    // doodle.value.update()
-
     window.addEventListener('DOMMouseScroll', handleMouseWheelDOM) // Mozilla Firefox
     window.addEventListener('mousewheel', handleMouseWheel, { passive: false }) // Other browsers
     window.addEventListener('resize', calculateSectionOffsets)
@@ -195,39 +182,6 @@ onUnmounted(() => {
       img.ld.ld-fade(src="@/assets/emoji.webp")
       h4.text-white.my-5 #VRC_UNWZ
 #bg(ref='bg')
-  //- CSS Doodle Remake
-  //- https://www.youtube.com/watch?v=wuUSVEcK-kM
-  //- css-doodle(v-pre).
-  //-   :doodle {
-  //-     @grid: 7x7 / 100vmax;
-  //-     position: relative;
-  //-     top: 0; left: 0;
-  //-     z-index: 0;
-  //-   }
-
-  //-   left: @r(100%);
-  //-   border-radius: 50%;
-  //-   bottom: 0;
-
-  //-   @size: 5% 5%;
-  //-   position: absolute;
-
-  //-   background:
-  //-     @p(
-  //-       radial-gradient(circle at center, #4fc3fc 0%, #4fc3fc00 100%),
-  //-       radial-gradient(circle at center, #ff2d75 0%, #ff2d7500 100%),
-  //-     )
-  //-     @r(0%, 100%) @r(0%, 100%) /
-  //-     100% 100%
-  //-     no-repeat;
-
-  //-   will-change: transform;
-  //-   animation: f 10s linear calc(-20s / @size() * @i()) infinite;
-  //-   filter: blur(5px);
-  //-   @keyframes f {
-  //-     from { transform: scale(0%); bottom: 0; }
-  //-     to { transform: scale(100%); bottom: 100%; }
-  //-   }
 nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
   .container
     a.navbar-brand.fade-in(href='#' @click.prevent='scrollToSection(0)')
