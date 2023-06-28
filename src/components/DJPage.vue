@@ -10,7 +10,7 @@ const djs = [
   {
     name: 'Kento',
     role: 'Owner / DJ / VJ',
-    image: new URL('../assets/dj/kento.jpg', import.meta.url).href,
+    image: new URL('../assets/dj/kento.webp', import.meta.url).href,
     text: 'profile.kento',
     genre: [],
     sns: [
@@ -22,7 +22,7 @@ const djs = [
   {
     name: 'Xiaokao',
     role: 'DJ',
-    image: new URL('../assets/dj/xiaokao.png', import.meta.url).href,
+    image: new URL('../assets/dj/xiaokao.webp', import.meta.url).href,
     text: 'profile.xiaokao',
     genre: [],
     sns: [
@@ -33,7 +33,7 @@ const djs = [
   {
     name: 'Jill',
     role: 'DJ / Art',
-    image: new URL('../assets/dj/jill.jpg', import.meta.url).href,
+    image: new URL('../assets/dj/jill.webp', import.meta.url).href,
     text: 'profile.jill',
     genre: [],
     sns: [
@@ -45,7 +45,7 @@ const djs = [
   {
     name: 'kste5000',
     role: 'Art / VJ',
-    image: new URL('../assets/dj/kste.png', import.meta.url).href,
+    image: new URL('../assets/dj/kste.webp', import.meta.url).href,
     text: 'profile.kste',
     genre: [],
     sns: [
@@ -55,7 +55,7 @@ const djs = [
   {
     name: 'Eliot',
     role: 'DJ',
-    image: new URL('../assets/dj/eliot.png', import.meta.url).href,
+    image: new URL('../assets/dj/eliot.webp', import.meta.url).href,
     text: 'profile.eliot',
     genre: [],
     sns: [
