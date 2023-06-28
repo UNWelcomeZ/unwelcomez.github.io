@@ -68,10 +68,12 @@ const djs = [
 
 /** Modal **/
 let modal = null
+const modalRef = ref(null)
 const modalDJ = ref(0)
 const showModal = (idx) => {
   modalDJ.value = idx
   modal.show()
+  swiperRef.value.autoplay.pause()
 }
 
 /** Animate **/
@@ -142,6 +144,9 @@ const swiperOptions = {
 /** Lifcycles **/
 onMounted(() => {
   modal = new Modal('#modal-dj')
+  modalRef.value.addEventListener('hidden.bs.modal', () => {
+    swiperRef.value.autoplay.run()
+  })
 })
 </script>
 
@@ -165,7 +170,7 @@ section.section#dj
       .col-1.position-relative
         #swiper-dj-next.swiper-button-next
 Teleport(to='body')
-  .modal.fade#modal-dj
+  .modal.fade#modal-dj(ref="modalRef")
     .modal-dialog.modal-dialog-centered.modal-lg
       .modal-content-wrapper
         .modal-content.position-relative

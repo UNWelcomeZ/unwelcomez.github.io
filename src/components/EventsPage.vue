@@ -192,12 +192,14 @@ const events = [
 
 /** Modal **/
 let modal = null
+const modalRef = ref(null)
 const modalEvent = ref(0)
 const modalSet = ref(0)
 const showModal = (idx) => {
   modalEvent.value = idx
   modalSet.value = 0
   modal.show()
+  swiperRef.value.autoplay.pause()
 }
 
 /** Animate **/
@@ -269,6 +271,9 @@ const swiperOptions = {
 /** Lifcycles **/
 onMounted(() => {
   modal = new Modal('#modal-event')
+  modalRef.value.addEventListener('hidden.bs.modal', () => {
+    swiperRef.value.autoplay.run()
+  })
 })
 </script>
 
@@ -292,7 +297,7 @@ section.section#events
       .col-1.position-relative
         #swiper-event-next.swiper-button-next
 Teleport(to='body')
-  .modal.fade#modal-event
+  .modal.fade#modal-event(ref="modalRef")
     .modal-dialog.modal-dialog-centered.modal-xl
       .modal-content-wrapper
         .modal-content.position-relative
