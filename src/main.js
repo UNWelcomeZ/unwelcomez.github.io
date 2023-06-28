@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faTwitter, faSoundcloud, faMixcloud, faDiscord, faTwitch, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faEarthAsia } from '@fortawesome/free-solid-svg-icons'
 import VueGtag from 'vue-gtag'
+import Particles from 'vue3-particles'
 import App from './App.vue'
 import i18n from './i18n'
 import 'swiper/css'
@@ -19,4 +20,5 @@ app
   .component('font-awesome-icon', FontAwesomeIcon)
   .use(i18n)
   .use(VueGtag, { config: { id: 'G-6E15JTQ95D' } })
+  .use(Particles)
   .mount('#app')
