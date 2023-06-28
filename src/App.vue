@@ -192,7 +192,7 @@ onUnmounted(() => {
 #loading
   .row.w-100
     .col-12.text-center
-      img.ld.ld-fade(src="@/assets/emoji.png")
+      img.ld.ld-fade(src="@/assets/emoji.webp")
       h4.text-white.my-5 #VRC_UNWZ
 #bg(ref='bg')
   //- CSS Doodle Remake
@@ -231,7 +231,7 @@ onUnmounted(() => {
 nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
   .container
     a.navbar-brand.fade-in(href='#' @click.prevent='scrollToSection(0)')
-      img(src='./assets/nav.png')
+      img(src='./assets/nav.webp')
     button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
       span.navbar-toggler-icon
     .collapse.navbar-collapse#navbar-content
