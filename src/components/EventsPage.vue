@@ -159,7 +159,7 @@ const events = [
       {
         dj: 'Kento',
         vj: 'novu',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol5%2F'
       },
       {
         dj: 'Souya',
@@ -179,7 +179,7 @@ const events = [
       {
         dj: 'Yu5ei',
         vj: 'kste5000',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FThisIsYusei%2F230610-unwpa-vol5-side-ims%2F'
       },
       {
         dj: 'LR163',
