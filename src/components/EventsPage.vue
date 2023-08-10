@@ -149,7 +149,7 @@ const events = [
       {
         dj: 'Eliot',
         vj: 'kste5000',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Feliot0507%2Funwpa-vol5-team-ims-20230610%2F'
       },
       {
         dj: 'DJ_Jill',
