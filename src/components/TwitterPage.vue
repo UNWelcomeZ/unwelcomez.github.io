@@ -31,8 +31,6 @@ section.section#twitter
     .row.align-content-center.justify-content-center.h-100
       .col-12.overlay-right
         h1.text-white.text-center Tweets
-      .col-10
-        .wbctA.w-100(data-name='onstipe')
-          component(:is="'script'" defer src='https://onstipe.com/web/js/webembed.js' type='text/javascript')
-          .wbctB.h-100(data-val='wvq40')
+      .col-10.wbctA
+        iframe(src='https://widgets.sociablekit.com/twitter-hashtag-feed/iframe/171269' frameborder='0' width='100%' height='1000')
 </template>
