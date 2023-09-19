@@ -187,6 +187,39 @@ const events = [
         player: ''
       }
     ]
+  },
+  {
+    name: 'UNWPA Vol.6',
+    sub: '少打音遊多讀書',
+    image: new URL('../assets/events/vol6.webp', import.meta.url).href,
+    imageTime: null,
+    date: '2023/05/06 20:00',
+    sets: [
+      {
+        dj: 'DJ_Jill',
+        player: ''
+      },
+      {
+        dj: 'Eliot',
+        player: ''
+      },
+      {
+        dj: 'Kento',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol6%2F'
+      },
+      {
+        dj: 'RainyDays',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FXiaokao%2Funwpa-vol6-cytus%2F'
+      },
+      {
+        dj: 'NeLiME',
+        player: ''
+      }
+    ]
   }
 ].reverse()
 
