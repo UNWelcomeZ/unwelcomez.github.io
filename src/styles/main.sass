@@ -1,20 +1,19 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons)
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap')
 @import bootstrap/scss/bootstrap
 @import @loadingio/loading.css/entries/fade.min.css
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap')
+
 
 $card-gradients: linear-gradient(45deg, #ff005e, #010615, #fbff00), linear-gradient(45deg, #89ff00, #010615, #00bcd4), linear-gradient(45deg, #772aff, #010615, #2196f3)
 $modal-clip-size: 20px
 $loading-bg: #000000
-$primaryBlue: #4fc3fc
-$primaryRed: #ff2d75
 
 /** Layout CSS **/
 a
-  font-family: 'Audiowide'
+  font-family: 'Sedgwick Ave Display'
 @for $i from 1 through 6
   h#{$i}
-    font-family: 'Audiowide'
+    font-family: 'Sedgwick Ave Display'
 
 body.modal-open #sections-menu
   display: none
@@ -27,7 +26,7 @@ body.modal-open #sections-menu
 
 #bg
   // background: 
-  $bgColor: #0c192ccc
+  $bgColor: #2e0600cc
   background-image: linear-gradient(0deg, $bgColor, $bgColor), url(../assets/bg.webp)
   background-size: cover
   background-position: center 0px
