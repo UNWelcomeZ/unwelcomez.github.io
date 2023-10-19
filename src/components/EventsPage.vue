@@ -220,6 +220,35 @@ const events = [
         player: ''
       }
     ]
+  },
+  {
+    name: 'UNWPA Vol.7',
+    sub: '1st-Our Show',
+    image: new URL('../assets/events/vol7.webp', import.meta.url).href,
+    imageTime: new URL('../assets/events/vol7-time.webp', import.meta.url).href,
+    date: '2023/05/06 20:00',
+    sets: [
+      {
+        dj: 'Eliot',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'DJ_Jill',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'Kento',
+        vj: 'kste5000',
+        player: ''
+      }
+    ]
   }
 ].reverse()
 
