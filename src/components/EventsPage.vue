@@ -201,7 +201,7 @@ const events = [
       },
       {
         dj: 'Eliot',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Feliot0507%2Funwpa-vol6-rhythm-games-20230826%2F'
       },
       {
         dj: 'Kento',
@@ -231,7 +231,7 @@ const events = [
       {
         dj: 'Eliot',
         vj: 'Kento',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Feliot0507%2Funwpa-vol7-1st-our-show-20231007%2F'
       },
       {
         dj: 'DJ_Jill',
