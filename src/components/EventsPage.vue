@@ -197,7 +197,7 @@ const events = [
     sets: [
       {
         dj: 'DJ_Jill',
-        player: ''
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJ_JILL%2F230826-unwpa-vol6-maimai-setlist%2F'
       },
       {
         dj: 'Eliot',
