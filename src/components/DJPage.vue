@@ -14,7 +14,7 @@ const djs = [
     text: 'profile.kento',
     genre: [],
     sns: [
-      { type: 'twitter', link: 'https://twitter.com/kentotw0520' },
+      { type: 'x-twitter', link: 'https://twitter.com/kentotw0520' },
       { type: 'soundcloud', link: 'https://soundcloud.com/kento0520' },
       { type: 'mixcloud', link: 'https://www.mixcloud.com/kento520/' }
     ]
@@ -26,7 +26,7 @@ const djs = [
     text: 'profile.xiaokao',
     genre: [],
     sns: [
-      { type: 'twitter', link: 'https://twitter.com/Xia0KAO' },
+      { type: 'x-twitter', link: 'https://twitter.com/Xia0KAO' },
       { type: 'soundcloud', link: 'https://soundcloud.com/xiaokao' }
     ]
   },
@@ -37,7 +37,7 @@ const djs = [
     text: 'profile.jill',
     genre: [],
     sns: [
-      { type: 'twitter', link: 'https://twitter.com/DJ_Jill32' },
+      { type: 'x-twitter', link: 'https://twitter.com/DJ_Jill32' },
       { type: 'soundcloud', link: 'https://soundcloud.com/jill-dj' },
       { type: 'mixcloud', link: 'https://www.mixcloud.com/DJ_JILL/' }
     ]
@@ -49,7 +49,7 @@ const djs = [
     text: 'profile.kste',
     genre: [],
     sns: [
-      { type: 'twitter', link: 'https://twitter.com/kste5000' }
+      { type: 'x-twitter', link: 'https://twitter.com/kste5000' }
     ]
   },
   {
@@ -59,7 +59,7 @@ const djs = [
     text: 'profile.eliot',
     genre: [],
     sns: [
-      { type: 'twitter', link: 'https://twitter.com/eliot0507' },
+      { type: 'x-twitter', link: 'https://twitter.com/eliot0507' },
       { type: 'instagram', link: 'https://www.instagram.com/eliot0507/' },
       { type: 'mixcloud', link: 'https://www.mixcloud.com/eliot0507/' }
     ]
