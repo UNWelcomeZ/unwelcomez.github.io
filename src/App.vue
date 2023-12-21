@@ -200,6 +200,10 @@ nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
             font-awesome-icon.fa-fw(:icon="['fab', 'facebook-f']")
             span.d-sm-none &emsp;Facebook
         li.nav-item
+          a.nav-link.link-light.fade-in(href='https://www.instagram.com/unwelcomez/' target='_blank')
+            font-awesome-icon.fa-fw(:icon="['fab', 'instagram']")
+            span.d-sm-none &emsp;Instagram
+        li.nav-item
           a.nav-link.link-light.fade-in(href='https://discord.gg/BPpNaUTxMy' target='_blank')
             font-awesome-icon.fa-fw(:icon="['fab', 'discord']")
             span.d-sm-none &emsp;Discord
