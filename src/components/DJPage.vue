@@ -63,6 +63,17 @@ const djs = [
       { type: 'instagram', link: 'https://www.instagram.com/eliot0507/' },
       { type: 'mixcloud', link: 'https://www.mixcloud.com/eliot0507/' }
     ]
+  },
+  {
+    name: 'IIka',
+    role: 'DJ',
+    image: new URL('../assets/dj/iika.webp', import.meta.url).href,
+    text: 'profile.iika',
+    genre: [],
+    sns: [
+      { type: 'x-twitter', link: 'https://twitter.com/IkaShiina' },
+      { type: 'mixcloud', link: 'https://www.mixcloud.com/a0195231/' }
+    ]
   }
 ]
 
@@ -180,7 +191,7 @@ Teleport(to='body')
             button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
           .modal-body
             .container-fluid
-              .row
+              .row.align-items-center
                 .col-12.col-lg-6.text-center
                   img#modal-dj-avatar(:src='djs[modalDJ].image')
                 .col-12.col-lg-6.my-3
