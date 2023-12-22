@@ -26,7 +26,7 @@ const djs = [
     text: 'profile.xiaokao',
     genre: [],
     sns: [
-      { type: 'x-twitter', link: 'https://twitter.com/Xia0KAO' },
+      { type: 'x-twitter', link: 'https://twitter.com/LittleHighVRDJ' },
       { type: 'soundcloud', link: 'https://soundcloud.com/xiaokao' }
     ]
   },
