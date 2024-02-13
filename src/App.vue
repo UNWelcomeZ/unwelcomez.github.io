@@ -193,7 +193,7 @@ nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
       ul.navbar-nav.ms-auto.mb-lg-0
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://twitter.com/VRC_UNWelcomeZ' target='_blank')
-            font-awesome-icon.fa-fw(:icon="['fab', 'twitter']")
+            font-awesome-icon.fa-fw(:icon="['fab', 'x-twitter']")
             span.d-sm-none &emsp;Twitter
         li.nav-item
           a.nav-link.link-light.fade-in(href='https://www.facebook.com/profile.php?id=100091842720646' target='_blank')
