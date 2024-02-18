@@ -193,7 +193,7 @@ const events = [
     sub: '少打音遊多讀書',
     image: new URL('../assets/events/vol6.webp', import.meta.url).href,
     imageTime: null,
-    date: '2023/05/06 20:00',
+    date: '2023/08/26 20:00',
     sets: [
       {
         dj: 'DJ_Jill',
@@ -226,7 +226,7 @@ const events = [
     sub: '1st-Our Show',
     image: new URL('../assets/events/vol7.webp', import.meta.url).href,
     imageTime: new URL('../assets/events/vol7-time.webp', import.meta.url).href,
-    date: '2023/05/06 20:00',
+    date: '2023/10/07 20:00',
     sets: [
       {
         dj: 'Eliot',
