@@ -249,6 +249,35 @@ const events = [
         player: ''
       }
     ]
+  },
+  {
+    name: 'UNWPA Vol.8',
+    sub: 'It’s so UwU',
+    image: new URL('../assets/events/vol8.webp', import.meta.url).href,
+    imageTime: null,
+    date: '2023/12/23 20:00',
+    sets: [
+      {
+        dj: 'Kento',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol8%2F'
+      },
+      {
+        dj: '夕張蜜柑',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fyuubarimikan%2Funwpa-vol8-its-so-uwu-2nd-dj%2F'
+      },
+      {
+        dj: 'CAXZ',
+        player: ''
+      },
+      {
+        dj: 'Eliot',
+        player: ' https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Feliot0507%2Funwpa-vol8-its-so-uwu-20231223%2F'
+      },
+      {
+        dj: 'とかげ',
+        player: ''
+      }
+    ]
   }
 ].reverse()
 
