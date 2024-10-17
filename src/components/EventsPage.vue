@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { Modal } from 'bootstrap'
 import gsap, { Expo } from 'gsap'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper'
 
 const events = [
@@ -275,6 +275,99 @@ const events = [
       },
       {
         dj: 'とかげ',
+        player: ''
+      }
+    ]
+  },
+  {
+    name: 'UNWPA Vol.9',
+    sub: 'MY FAVORITE NUMBER - 69',
+    image: new URL('../assets/events/vol9.webp', import.meta.url).href,
+    imageTime: null,
+    date: '2024/06/09 19:00',
+    sets: [
+      {
+        dj: 'Kento',
+        vj: 'kste5000',
+        player: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fkento520%2Funwpa-vol9%2F'
+      },
+      {
+        dj: 'm0y45h1',
+        vj: 'Kami_God_GG',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'CB SQUARE',
+        vj: 'Kami_God_GG',
+        player: ''
+      },
+      {
+        dj: 'IIka',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'Jan!',
+        vj: 'Kami_God_GG',
+        player: ''
+      }
+    ]
+  },
+  {
+    name: 'UNWPA Vol.10',
+    sub: 'VS - ROUND 2',
+    image: new URL('../assets/events/vol10.webp', import.meta.url).href,
+    imageTime: new URL('../assets/events/vol10-time.webp', import.meta.url).href,
+    date: '2024/08/10 19:30',
+    sets: [
+      {
+        dj: '水鳥 waterbird',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: '元太げんた',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: '夕張蜜柑',
+        vj: 'Yan-K',
+        player: ''
+      },
+      {
+        dj: '餅屋',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'めいちゃん',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: '72時間深海旅行',
+        vj: 'Yan-K',
+        player: ''
+      },
+      {
+        dj: 'ffcl',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'CAXZ',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'CB SQUARE',
+        vj: 'Yan-K',
         player: ''
       }
     ]
