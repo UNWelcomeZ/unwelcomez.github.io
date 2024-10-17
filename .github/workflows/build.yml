@@ -8,10 +8,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
       - name: Install and Build
         run: |
-          yarn
-          yarn build
+          bun i
+          bun build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
