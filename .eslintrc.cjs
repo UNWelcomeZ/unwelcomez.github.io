@@ -3,6 +3,7 @@ module.exports = {
   root: true,
   extends: [
     'plugin:vue/vue3-essential',
+    'plugin:vue-pug/vue3-recommended',
     'eslint:recommended',
     '@vue/eslint-config-standard'
   ],
@@ -13,7 +14,5 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    'no-unused-vars': 'off',
-    'vue/script-setup-uses-vars': 'off'
   }
 }

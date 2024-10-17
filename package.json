@@ -14,6 +14,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@loadingio/loading.css": "^3.2.1",
     "@popperjs/core": "^2.11.8",
+    "@vue/language-plugin-pug": "^2.1.6",
     "@vueuse/core": "^9.13.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
@@ -32,6 +33,7 @@
     "@vue/eslint-config-standard": "^8.0.1",
     "eslint": "^8.57.1",
     "eslint-plugin-vue": "^9.29.0",
+    "eslint-plugin-vue-pug": "^0.6.2",
     "pug": "^3.0.3",
     "sass": "1.77.6",
     "vite": "^3.2.11"
