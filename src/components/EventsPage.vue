@@ -346,7 +346,7 @@ const events = [
         player: ''
       },
       {
-        dj: 'めいちゃん',
+        dj: 'DJ_Jill',
         vj: 'kste5000',
         player: ''
       },
@@ -368,6 +368,78 @@ const events = [
       {
         dj: 'CB SQUARE',
         vj: 'Yan-K',
+        player: ''
+      }
+    ]
+  },
+  {
+    name: 'UNWPA Vol.11',
+    sub: '2nd Anniversary',
+    image: new URL('../assets/events/vol11.webp', import.meta.url).href,
+    imageTime: null,
+    date: '2024/10/26 20:00',
+    sets: [
+      {
+        dj: 'DJ_Jill',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'Eliot',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'xiriya',
+        vj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'NINJ4',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'Kento',
+        vj: 'kste5000',
+        player: ''
+      },
+      {
+        dj: 'Xiaokao B2B IIka',
+        vj: 'kste5000',
+        player: ''
+      }
+    ]
+  },
+  {
+    name: 'UNWPA Vol.12',
+    sub: 'RHYTHM GAMES Track. 02',
+    image: new URL('../assets/events/vol12.webp', import.meta.url).href,
+    imageTime: null,
+    date: '2024/12/14 20:00',
+    sets: [
+      {
+        dj: 'Kento',
+        player: ''
+      },
+      {
+        dj: 'MSPR',
+        player: ''
+      },
+      {
+        dj: 'DJ_Jill',
+        player: ''
+      },
+      {
+        dj: 'SUI*amtk',
+        player: ''
+      },
+      {
+        dj: 'IIka',
+        player: ''
+      },
+      {
+        dj: 'Presti',
         player: ''
       }
     ]
