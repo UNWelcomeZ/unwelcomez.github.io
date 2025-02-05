@@ -175,9 +175,9 @@ section.section#dj
           SwiperSlide(v-for='(dj, idx) in djs' :key='idx' ref='djRefs')
             .card-dj(:id='"dj-"+(idx+1)' @click='showModal(idx)')
               span
-                img.card-dj-img(:src='dj.image')
+                img.card-dj-img(:src='dj.image' :alt='dj.name')
             .text-white.text-center.my-3
-              h4 {{ dj.name }}
+              p.h4 {{ dj.name }}
       .col-1.position-relative
         #swiper-dj-next.swiper-button-next
 Teleport(to='body')
@@ -205,6 +205,6 @@ Teleport(to='body')
                     hr.opacity-100.bg-white
                     .col-12
                       h4
-                        a.link-light.mx-2(v-for='link in djs[modalDJ].sns' :href='link.link' target='_blank')
+                        a.link-light.mx-2(v-for='(link, i) in djs[modalDJ].sns' :key='i' :href='link.link' target='_blank')
                           font-awesome-icon(:icon="['fab', link.type]")
 </template>

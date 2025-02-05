@@ -1,6 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { Modal } from 'bootstrap'
+import { ref } from 'vue'
 import gsap, { Expo } from 'gsap'
 
 /** Animate **/
@@ -32,5 +31,5 @@ section.section#twitter
       .col-12.overlay-right
         h1.text-white.text-center Tweets
       .col-10.wbctA
-        iframe(src='https://widgets.sociablekit.com/twitter-hashtag-feed/iframe/171269' frameborder='0' width='100%' height='1000')
+        iframe(title='Twitter Hashtag Feed' src='https://widgets.sociablekit.com/twitter-hashtag-feed/iframe/171269' frameborder='0' width='100%' height='1000')
 </template>

@@ -1,6 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, onUnmounted, nextTick } from 'vue'
-import { useSwipe } from '@vueuse/core'
+import { ref } from 'vue'
 import gsap from 'gsap'
 import LogoVRC from '@/components/LogoVRC.vue'
 import HomePage from '@/components/HomePage.vue'
@@ -186,7 +185,7 @@ const fullPageOptions = {
 nav.navbar.navbar-expand-sm.navbar-dark.fixed-top#header
   .container
     a.navbar-brand.fade-in(href='#' @click.prevent='scrollToSection(0)')
-      img(src='./assets/nav.webp')
+      img(alt="UNWZ logo" src='./assets/nav.webp')
     button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
       span.navbar-toggler-icon
     .collapse.navbar-collapse#navbar-content

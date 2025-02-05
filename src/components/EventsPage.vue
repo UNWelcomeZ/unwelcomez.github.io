@@ -547,9 +547,9 @@ section.section#events
           SwiperSlide(v-for='(event, idx) in events' :key='idx' ref='eventRefs')
             .card-event(:id='"event-"+(idx+1)' @click='showModal(idx)')
               span
-                img.card-event-img(:src='event.image')
+                img.card-event-img(:alt='event.name' :src='event.image')
             .text-white.text-center.my-3
-              h4 {{ event.name }}
+              p.h4 {{ event.name }}
       .col-1.position-relative
         #swiper-event-next.swiper-button-next
 Teleport(to='body')
@@ -570,9 +570,9 @@ Teleport(to='body')
             .container-fluid
               .row.justify-content-center
                 .col-6.poster-wrapper
-                  img.poster(:class='{"poster-left": events[modalEvent].imageTime}' :src='events[modalEvent].image')
+                  img.poster(:alt='events[modalEvent].name' :class='{"poster-left": events[modalEvent].imageTime}' :src='events[modalEvent].image')
                 .col-6.poster-wrapper(v-if='events[modalEvent].imageTime')
-                  img.poster.poster-right(:src='events[modalEvent].imageTime')
+                  img.poster.poster-right(:alt='events[modalEvent].name' :src='events[modalEvent].imageTime')
           .modal-footer
             .container-fluid
               .row
@@ -584,6 +584,6 @@ Teleport(to='body')
             .container-fluid
               .row
                 .col-12
-                  iframe.w-100(v-if='events[modalEvent].sets[modalSet].player' height="120" :src="events[modalEvent].sets[modalSet].player" frameborder="0")
+                  iframe.w-100(title='Player' v-if='events[modalEvent].sets[modalSet].player' height="120" :src="events[modalEvent].sets[modalSet].player" frameborder="0")
                   h6.my-2.text-white.text-center(v-else) - NOT UPLOADED -
 </template>
