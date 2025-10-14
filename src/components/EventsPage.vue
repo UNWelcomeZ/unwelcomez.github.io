@@ -89,6 +89,13 @@ const events = [
     image: new URL('../assets/events/vol12.webp', import.meta.url).href,
     imageTime: null,
     date: '2024/12/14 20:00'
+  },
+  {
+    name: 'Unite With UNWZ',
+    sub: 'UNWelcomeZ 3rd Anniversary',
+    image: new URL('../assets/events/unite2025.webp', import.meta.url).href,
+    imageTime: new URL('../assets/events/unite2025-time.webp', import.meta.url).href,
+    date: '2025/10/11 13:00'
   }
 ].reverse()
 
