@@ -43,16 +43,6 @@ const djs = [
     ]
   },
   {
-    name: 'kste5000',
-    role: 'Art / VJ',
-    image: new URL('../assets/dj/kste.webp', import.meta.url).href,
-    text: 'profile.kste',
-    genre: [],
-    sns: [
-      { type: 'x-twitter', link: 'https://twitter.com/kste5000' }
-    ]
-  },
-  {
     name: 'Eliot',
     role: 'DJ',
     image: new URL('../assets/dj/eliot.webp', import.meta.url).href,
